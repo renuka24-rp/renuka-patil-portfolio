@@ -7,122 +7,141 @@
 
 <style>
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  margin: 0;
-  background: linear-gradient(120deg, #f6f9fc, #eef2f7);
-  color: #2c3e50;
+  background: radial-gradient(circle at top left, #1f2a44, #070b16);
+  color: #eaeaea;
 }
 
-/* Header */
-header {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #2c3e50, #3498db);
-  color: white;
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 60px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 40px;
+nav a {
+  color: #cfd6ff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
 }
 
-header p {
-  margin-top: 10px;
-  font-size: 18px;
-  opacity: 0.9;
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  padding: 80px 60px;
+  align-items: center;
 }
 
-/* Sections */
+.tags span {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin: 25px 0;
+}
+
+.hero h1 span {
+  color: #8ea2ff;
+}
+
+.hero p {
+  color: #b9c0ff;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons a {
+  display: inline-block;
+  padding: 12px 22px;
+  margin-right: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.primary {
+  background: #6c7cff;
+  color: #fff;
+}
+
+.secondary {
+  border: 1px solid #6c7cff;
+  color: #6c7cff;
+}
+
+/* Image */
+.hero img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Section */
 section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 50px 20px;
+  padding: 80px 60px;
 }
 
 h2 {
+  font-size: 32px;
   margin-bottom: 20px;
-  font-size: 28px;
-  border-left: 5px solid #3498db;
-  padding-left: 10px;
-}
-
-/* About */
-.about {
-  font-size: 17px;
-  line-height: 1.7;
 }
 
 /* Skills */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .skills span {
-  background: #3498db;
-  color: white;
+  display: inline-block;
+  margin: 8px 10px 0 0;
   padding: 8px 14px;
   border-radius: 20px;
-  font-size: 14px;
+  background: rgba(255,255,255,0.1);
+  font-size: 13px;
 }
 
 /* Projects */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
-.project-card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+.project {
+  background: rgba(255,255,255,0.06);
+  padding: 25px;
+  border-radius: 14px;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-}
-
-.project-card h3 {
-  margin-top: 0;
-}
-
-.project-card p {
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.project-card a {
+.project a {
   display: inline-block;
   margin-top: 10px;
-  margin-right: 10px;
+  color: #8ea2ff;
   text-decoration: none;
-  background: #2ecc71;
-  color: white;
-  padding: 7px 14px;
-  border-radius: 6px;
   font-size: 14px;
-}
-
-/* Contact */
-.contact a {
-  color: #3498db;
-  text-decoration: none;
-  font-weight: 500;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #eaeaea;
+  padding: 30px;
+  color: #888;
   font-size: 14px;
 }
 </style>
@@ -130,17 +149,49 @@ footer {
 
 <body>
 
-<header>
-  <h1>Renuka Patil</h1>
-  <p>Java Full Stack Developer | B.Tech Computer Science Engineering</p>
-</header>
+<nav>
+  <strong>Renuka</strong>
+  <div>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </div>
+</nav>
 
-<section>
+<div class="hero">
+  <div>
+    <div class="tags">
+      <span>Java</span>
+      <span>Spring Boot</span>
+      <span>REST APIs</span>
+    </div>
+
+    <h1>Hello, I’m <span>Renuka Patil</span>.</h1>
+
+    <p>
+      A Computer Science Engineering student and Java Full Stack Developer
+      passionate about building scalable backend systems, APIs, and clean
+      user experiences.
+    </p>
+
+    <div class="buttons">
+      <a class="primary" href="mailto:renukapatil.1707@gmail.com">Get in touch</a>
+      <a class="secondary" href="#projects">View projects</a>
+    </div>
+  </div>
+
+  <div>
+    <img src="profile.jpg" alt="Renuka Patil">
+  </div>
+</div>
+
+<section id="about">
   <h2>About Me</h2>
-  <p class="about">
-    I am a Computer Science Engineering student passionate about building full-stack
-    applications and solving real-world problems using modern software technologies.
-    I enjoy working with backend systems, APIs, data, and clean UI design.
+  <p>
+    I am currently pursuing B.Tech in Computer Science Engineering and enjoy
+    working across backend, frontend, and data-driven applications. I am
+    actively learning cloud, system design basics, and modern engineering
+    practices.
   </p>
 </section>
 
@@ -149,49 +200,36 @@ footer {
   <div class="skills">
     <span>Java</span>
     <span>Spring Boot</span>
-    <span>REST APIs</span>
     <span>Spring MVC</span>
     <span>Hibernate</span>
+    <span>REST APIs</span>
     <span>MySQL</span>
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
-    <span>React.js</span>
-    <span>Git</span>
-    <span>GitHub</span>
+    <span>React</span>
+    <span>Git & GitHub</span>
   </div>
 </section>
 
-<section>
+<section id="projects">
   <h2>Projects</h2>
   <div class="projects">
 
-    <div class="project-card">
+    <div class="project">
       <h3>Smart Job Portal</h3>
-      <p>
-        A full-stack Job Portal application where admins can post jobs and users
-        can browse and apply. Backend implemented using Spring Boot REST APIs.
-      </p>
-      <a href="https://github.com/renuka24-rp/smart-job-portal" target="_blank">GitHub</a>
+      <p>Full-stack job portal with Spring Boot REST APIs and frontend demo.</p>
+      <a href="https://github.com/renuka24-rp/smart-job-portal" target="_blank">GitHub</a><br>
       <a href="https://renuka24-rp.github.io/smart-job-portal/" target="_blank">Live Demo</a>
     </div>
 
-    <div class="project-card">
+    <div class="project">
       <h3>Student Course Management System</h3>
-      <p>
-        A system that allows course management and student enrollment using
-        backend APIs and relational data modeling.
-      </p>
+      <p>Course and enrollment management system using backend APIs.</p>
       <a href="https://github.com/renuka24-rp/student-course-management" target="_blank">GitHub</a>
     </div>
 
   </div>
-</section>
-
-<section class="contact">
-  <h2>Contact</h2>
-  <p>Email: renukapatil.1707@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/renuka24-rp" target="_blank">github.com/renuka24-rp</a></p>
 </section>
 
 <footer>
