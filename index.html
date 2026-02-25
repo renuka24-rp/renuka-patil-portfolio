@@ -127,6 +127,7 @@ h2 {
   background: rgba(255,255,255,0.06);
   padding: 25px;
   border-radius: 14px;
+  transition: 0.3s ease;
 }
 
 .project a {
@@ -135,6 +136,10 @@ h2 {
   color: #8ea2ff;
   text-decoration: none;
   font-size: 14px;
+}
+  .project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 /* Footer */
@@ -218,18 +223,21 @@ footer {
   <div class="projects">
 
     <div class="project">
-      <h3>Smart Job Portal</h3>
-      <p>Full-stack job portal with Spring Boot REST APIs and frontend demo.</p>
-      <a href="https://github.com/renuka24-rp/smart-job-portal" target="_blank">GitHub</a><br>
-      <a href="https://renuka24-rp.github.io/smart-job-portal/" target="_blank">Live Demo</a>
-    </div>
+  <h3>Smart Job Portal (Live Deployed)</h3>
+  <p>
+    Production-ready Job Portal built using Spring Boot, MVC architecture,
+    REST APIs, H2 database, and deployed on Render cloud platform.
+    Includes job listing, apply functionality, login UI, and admin interface.
+  </p>
 
-    <div class="project">
-      <h3>Student Course Management System</h3>
-      <p>Course and enrollment management system using backend APIs.</p>
-      <a href="https://github.com/renuka24-rp/student-course-management" target="_blank">GitHub</a>
-    </div>
+  <a href="https://github.com/renuka24-rp/smart-job-portal-new" target="_blank">
+    View Source Code →
+  </a><br>
 
+  <a href="https://smart-job-portal-new.onrender.com" target="_blank">
+    🌐 Live Application →
+  </a>
+</div>
   </div>
 </section>
 
